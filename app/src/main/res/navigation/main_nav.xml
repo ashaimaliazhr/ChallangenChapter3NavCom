@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_list"
+    app:startDestination="@id/alphabetFragment">
+
+    <fragment
+        android:id="@+id/alphabetFragment"
+        android:name="asha.binar.challangenchapter3navcom.view.AlphabetFragment"
+        android:label="fragment_alphabet"
+        tools:layout="@layout/fragment_alphabet" >
+        <action
+            android:id="@+id/action_alphabetFragment_to_word_Fragment"
+            app:destination="@id/word_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/word_Fragment"
+        android:name="asha.binar.challangenchapter3navcom.view.Word_Fragment"
+        android:label="fragment_word_"
+        tools:layout="@layout/fragment_word_" >
+        <action
+            android:id="@+id/action_word_Fragment_to_alphabetFragment"
+            app:destination="@id/alphabetFragment" />
+    </fragment>
+</navigation>
